@@ -4,10 +4,10 @@ class Song {
 	String name;
 	int score;
 	String URI;
-	String userID;
+	String userId;
 	String URL;
 
-	public Song(String name, String URI, String userID, String URL) {
+	public Song(String name, String URI, String userId, String URL) {
 		this.name = name;
 		this.score = 1;
 		this.URI = URI;
@@ -15,24 +15,28 @@ class Song {
 		this.URL = URL;
 	}
 
-	public void addSong(Song song) {
+	public String getURI() {
+		return this.URI;
+	}
+
+	public void add() {
 
 	}
 
-	public void removeSong(Song song) {
+	public void remove() {
 
 	}
 
-	public void upvote(Song song) {
-		this.song.score++;
+	public void upvote() {
+		this.score++;
 	}
 
-	public void downvote(Song song) {
-		this.song.score--;
+	public void downvote() {
+		this.score--;
 	}
 
-	public void getUpvotes(Song song) {
-		return this.song.score;
+	public int getScore() {
+		return this.score;
 	}
 
 }
