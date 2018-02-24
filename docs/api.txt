@@ -1,0 +1,27 @@
+'SUBSCRIBE': 
+first message to the ws:// server
+
+'CONNECTION_OK':
+payload:{token: string}
+
+'SEARCH_QUERRY':
+payload: {querry: string}
+
+'SEARCH_RESULTS':
+payload: {songResults: [{title: string, artist: string, album: string, id: int}], artistResults:[{name: string}], albumResults:[{name: string}]}
+
+'AlBUM_COVER': 
+header:'image/png'
+payload: bytes
+
+'ADD_SONG':
+payload:{id: int}
+
+'VETO_SONG':
+payload:{id: int}
+
+'SONG_VOTE':
+payload:{id: int, vote: int(-1, 1)}
+
+'ADMIN_LOGIN':
+payload:{password: string}
