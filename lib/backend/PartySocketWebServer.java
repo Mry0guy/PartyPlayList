@@ -24,48 +24,12 @@ public class PartySocketWebServer {
     MaxPQ<Integer> spotifyQueue = new MaxPQ<>();
     String[] allowedActions;
     boolean isAdmin = false;
+    boolean hasAdmin = false;
     int userId = 0;
     //User currentUser;
     @Inject
     private PartySessionHandler sessionHandler;
 
-    /*    @Override
-    public Object createWebSocket(ServletUpgradeRequest req, ServletUpgradeResponse resp) {
-        for (String subprotocol : req.getSubProtocols()) {
-            /*if ("CONNECTION_OK".equals(subprotocol))
-            {
-                resp.setAcceptedSubProtocol(subprotocol);
-                return binaryEcho;
-            }
-            if ("SEARCH_RESULTS".equals(subprotocol))
-            {
-                resp.setAcceptedSubProtocol(subprotocol);
-                return textEcho;
-            }
-            switch (subprotocol) {
-                case "SUBSCRIBE":
-                    return "You are Subscribed";
-                case "SEARCH_QUERY":
-                    return "I'll get right on that";
-                case "ALBUM COVER":
-                    return "Here's a nice picture";
-                case "ADD_SONG":
-                    //create a new song object
-                    return "Fine.";
-                case "VETO_SONG":
-                //check if user is admin
-                case "SONG_VOTE":
-                    return "OK";
-                case "ADMIN_LOGIN":
-                    //call logon method
-                    return "logged in";
-                default:
-                    break;
-            }
-        }
-
-}
-     */
     @OnOpen
     public void open(Session session) {
         //create new User.
