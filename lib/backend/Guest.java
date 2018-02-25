@@ -14,45 +14,46 @@ class Guest extends User {
 	}
 
 	public void addSong(Song song) {
-		this.songsAdded.add(this.song.getURI());
-		this.song.add();
+		this.songsAdded.add(song.getURI());
+		song.add(song);
 	}
 
 	public void removeSong(Song song) {
-		if(this.songsAdded.contains(this.song.getURI())) {
-			this.songsAdded.remove(this.song.getURI());
+		if(this.songsAdded.contains(song.getURI())) {
+			this.songsAdded.remove(song.getURI());
 		}
+		song.remove(song);
 	}
 
 	public void upvote(Song song) {
-		if(!this.upvotes.contains(this.song.getURI())) {
+		if(!this.upvotes.contains(song.getURI())) {
 			// Song is not in upvotes but is currently in downvotes
-			if(this.downvotes.contains(this.song.getURI())) {
-				this.downvotes.remove(this.song.getURI());
-				this.song.upvote();
+			if(this.downvotes.contains(song.getURI())) {
+				this.downvotes.remove(song.getURI());
+				song.upvote();
 			}
-			this.upvotes.add(this.song.getURI());
-			this.song.upvote();
+			this.upvotes.add(song.getURI());
+			song.upvote();
 		} else {
 			// Song is currently already in upvotes
-			this.upvotes.remove(this.song.getURI());
-			this.song.downvote();
+			this.upvotes.remove(song.getURI());
+			song.downvote();
 		}
 	}
 
 	public void downvote(Song song) {
-		if(!this.downvotes.contains(this.song.getURI())) {
+		if(!this.downvotes.contains(song.getURI())) {
 			// Song is not in downvotes but is currently in upvotes
-			if(this.upvotes.contains(this.song.getURI())) {
-				this.upvotes.remove(this.song.getURI());
-				this.song.downvote();
+			if(this.upvotes.contains(song.getURI())) {
+				this.upvotes.remove(song.getURI());
+				song.downvote();
 			}
-			this.downvotes.add(this.song.getURI());
-			this.song.downvote();
+			this.downvotes.add(song.getURI());
+			song.downvote();
 		} else {
 			// Song is currently already in downvotes
-			this.downvotes.remove(this.song.getURI());
-			this.song.upvote();
+			this.downvotes.remove(song.getURI());
+			song.upvote();
 		}
 	}
 
