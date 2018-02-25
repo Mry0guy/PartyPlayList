@@ -1,0 +1,40 @@
+'SUBSCRIBE': 
+first message to the ws:// server
+
+
+'CONNECTION_OK':
+payload: { token: String }
+
+
+'SEARCH_QUERY':
+payload: { query: String }
+
+src/main/java/com/wrapper/spotify/requests/data/search/SearchItemRequest.java
+src/main/java/com/wrapper/spotify/requests/data/search/simplified/SearchTracksRequest.java
+
+'SEARCH_RESULTS':
+payload: {songResults: [{ title: String, artist: String, album: String, id: int }], artistResults:[{ name: String }], albumResults:[{ name: String }]}
+
+
+'AlBUM_COVER': 
+header: 'image/png'
+payload: bytes
+src/main/java/com/wrapper/spotify/model_objects/specification/Album.java
+getImages()
+
+'ADD_SONG':
+payload: { songURL: String }
+src/main/java/com/wrapper/spotify/requests/data/playlists/AddTracksToPlaylistRequest.java
+
+
+'REMOVE_SONG':
+payload: { songURL: String }
+src/main/java/com/wrapper/spotify/requests/data/playlists/RemoveTracksFromPlaylistRequest.java
+
+'SONG_VOTE':
+payload: { songURL: String, vote: int(-1, 1) }
+ping the database
+
+'ADMIN_LOGIN':
+payload: { password: String }
+src/main/java/com/wrapper/spotify/requests/authorization/authorization_code/AuthorizationCodeRequest.java
