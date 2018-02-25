@@ -2,26 +2,26 @@
 first message to the ws:// server
 
 'CONNECTION_OK':
-payload:{token: string}
+payload:{token: String}
 
-'SEARCH_QUERRY':
-payload: {querry: string}
+'SEARCH_QUERY':
+payload: {query: String}
 
 'SEARCH_RESULTS':
-payload: {songResults: [{title: string, artist: string, album: string, id: int}], artistResults:[{name: string}], albumResults:[{name: string}]}
+payload: {songResults: [{title: String, artist: String, album: String, id: int}], artistResults:[{name: String}], albumResults:[{name: String}]}
 
 'AlBUM_COVER': 
 header:'image/png'
 payload: bytes
 
 'ADD_SONG':
-payload:{id: int}
+payload:{songURL: String }
 
-'VETO_SONG':
-payload:{id: int}
+'REMOVE_SONG':
+payload:{songURL: String}
 
 'SONG_VOTE':
-payload:{id: int, vote: int(-1, 1)}
+payload:{songURL: String, vote: int(-1, 1)}
 
 'ADMIN_LOGIN':
-payload:{password: string}
+payload:{password: String}
