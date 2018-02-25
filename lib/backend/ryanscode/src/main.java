@@ -27,7 +27,7 @@ public class main {
         //switch over input fo wsaction
         // wsaction.type
         // type > string 
-        switch(wsactionType) {
+        switch(wsaction.Type()) {
             case "SEARCH_QUERY": 
             private static final AddTracksToPlaylistRequest addTracksToPlaylistRequest = spotifyApi
             .addTracksToPlaylist(userId, playlistId, uris)
@@ -38,10 +38,32 @@ public class main {
             .getPlaylistCoverImage(userId, playlistId)
             .build();
             break;
-            case "ADD_SONG": break;
-            case "REMOVE_SONG": break;
-            case "SONG_VOTE": break;
-            case "ADMIN_LOGIN": break;
+            case "ADD_SONG": 
+            private static final AddTracksToPlaylistRequest addTracksToPlaylistRequest = spotifyApi
+            .addTracksToPlaylist(userId, playlistId, uris)
+            .position(0)
+            .build();
+            break;
+            case "REMOVE_SONG": 
+            private static final JsonArray tracks = new JsonParser().parse("[\"01iyCAUm8EvOFqVWYJ3dVX\"]").getAsJsonArray();
+            private static final RemoveTracksFromPlaylistRequest removeTracksFromPlaylistRequest = spotifyApi
+            .removeTracksFromPlaylist(userId, playlistId, tracks)
+            .snapshotId("JbtmHBDBAYu3/bt8BOXKjzKx3i0b6LCa/wVjyl6qQ2Yf6nFXkbmzuEa+ZI/U1yF+")
+            .build();
+            break;
+            case "SONG_VOTE": 
+            if(wsaction.Payload().contains("host") {
+                if(wsaction.Payload() == 1) {
+                    host.upvote();
+                } else {
+                    host.downvote();
+                } else if(wsaction.Payload() == 1) {
+                    guest.upvote();
+                } else {
+                    guest.downvote();
+                }
+                break;
+            //case "ADMIN_LOGIN": break;
         }
     }
 
@@ -120,5 +142,52 @@ public static void getPlaylistCoverImage_Async() {
       System.out.println("Error: " + e.getCause().getMessage());
   }
 }
+public static void addTracksToPlaylist_Sync() {
+    try {
+      final SnapshotResult snapshotResult = addTracksToPlaylistRequest.execute();
+
+      System.out.println("Snapshot ID: " + snapshotResult.getSnapshotId());
+  } catch (IOException | SpotifyWebApiException e) {
+      System.out.println("Error: " + e.getMessage());
+  }
+}
+
+public static void addTracksToPlaylist_Async() {
+    try {
+      final Future<SnapshotResult> snapshotResultFuture = addTracksToPlaylistRequest.executeAsync();
+
+      // ...
+
+      final SnapshotResult snapshotResult = snapshotResultFuture.get();
+
+      System.out.println("Snapshot ID: " + snapshotResult.getSnapshotId());
+  } catch (InterruptedException | ExecutionException e) {
+      System.out.println("Error: " + e.getCause().getMessage());
+  }
+}
+
+public static void removeTracksFromPlaylist_Sync() {
+    try {
+      final SnapshotResult snapshotResult = removeTracksFromPlaylistRequest.execute();
+
+      System.out.println("Snapshot ID: " + snapshotResult.getSnapshotId());
+    } catch (IOException | SpotifyWebApiException e) {
+      System.out.println("Error: " + e.getMessage());
+    }
+  }
+
+  public static void removeTracksFromPlaylist_Async() {
+    try {
+      final Future<SnapshotResult> snapshotResultFuture = removeTracksFromPlaylistRequest.executeAsync();
+
+      // ...
+
+      final SnapshotResult snapshotResult = snapshotResultFuture.get();
+
+      System.out.println("Snapshot ID: " + snapshotResult.getSnapshotId());
+    } catch (InterruptedException | ExecutionException e) {
+      System.out.println("Error: " + e.getCause().getMessage());
+    }
+  }
 
 }
