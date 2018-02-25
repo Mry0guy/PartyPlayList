@@ -8,13 +8,17 @@ class Song {
 	String URI;
 	String userId;
 	String URL;
+	String artist;
+	String album;
 	ArrayList<String> list = new ArrayList<String>();
 
-	public Song(String name, String URI, String URL) {
+	public Song(String name, String URI, String URL, String artist, String album) {
 		this.name = name;
 		this.score = 1;
 		this.URI = URI;
 		this.URL = URL;
+		this.artist = artist;
+		this.album = album;
 	}
 
 	public void add(Song song) {
