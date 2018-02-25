@@ -1,11 +1,11 @@
 import jdk.nashorn.internal.parser.JSONParser;
 
 
-public class wsAction {
+public class Action {
     private String type;
     private String payload;
 
-    public wsAction(String type, String payload) {
+    public Action(String type, String payload) {
         super();
         this.type = type;
         this.payload = payload;
