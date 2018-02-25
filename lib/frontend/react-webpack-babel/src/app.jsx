@@ -4,6 +4,10 @@ import 'styles/index.scss';
 import withRouter from 'react-router-dom'
 
 class App extends React.Component() {
+	constructor() {
+		super()
+	}
+
 	render() {
 		return (
 			<div className='App'>

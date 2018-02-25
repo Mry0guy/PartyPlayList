@@ -6,19 +6,17 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './reducers'
 import Routes from './routes'
 import middleware from 'redux-saga'
-import { socketConnectSaga } from './saga'
+import { setupSaga } from './saga'
 
 
-const initialState = {
-	text: 'nothing yet'
-}
+const initialState = { host: false, que: [], SEARCH_RESULTS: [] }
 const sagaMiddleware = middleware()
 const middlewareList = [sagaMiddleware]
 const enhancers = []
 const composedEnhancers = compose(applyMiddleware(...middlewareList), ...enhancers)
 let store = createStore(rootReducer, initialState, composedEnhancers)
 
-sagaMiddleware.run(socketConnectSaga)
+sagaMiddleware.run(setupSaga)
 
 ReactDOM.render(
 	<AppContainer>

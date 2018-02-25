@@ -5,9 +5,11 @@ import {
 } from 'react-router-dom';
 import App from './app';
 import Guests from './components/Guests';
-import Residents from './components/Residents';
+import Hosts from './components/Hosts';
 import 'styles/index.scss';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
 
 const Routes = () => (
 	<Router>
@@ -15,7 +17,7 @@ const Routes = () => (
 			<div>
 				<Route exact path="/" component={App} />
 				<Route path="/guests" component={Guests} />
-				<Route path="/residents" component={Residents} />
+				<Route path="/hosts" component={Hosts} />
 			</div>
 		</MuiThemeProvider>
 	</Router>
