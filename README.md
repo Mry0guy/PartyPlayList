@@ -1,1 +1,0 @@
-# SteelHacks 2018

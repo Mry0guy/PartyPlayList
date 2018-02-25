@@ -23,5 +23,7 @@ payload:{id: int}
 'SONG_VOTE':
 payload:{id: int, vote: int(-1, 1)}
 
-'ADMIN_LOGIN':
+'HOST_LOGIN':
 payload:{password: string}
+
+'LOGIN_OK'
