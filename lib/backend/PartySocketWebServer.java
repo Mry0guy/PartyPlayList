@@ -38,6 +38,7 @@ public class PartySocketWebServer {
 
     @OnClose
     public void close(Session session) {
+        sessionHandler.closeSession(session);
     }
 
     @OnError
