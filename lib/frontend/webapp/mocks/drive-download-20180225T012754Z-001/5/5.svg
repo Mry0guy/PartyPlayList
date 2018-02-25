@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 550 977" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<style type="text/css"><![CDATA[
+.g1_5{
+fill: #FFFFFF;
+}
+.g2_5{
+fill: #121212;
+}
+]]></style>
+</defs>
+<path d="M0,0L550,0l0,977.8l-550,0L0,0Z" class="g1_5" />
+<path d="M0,0L550,0l0,977.8l-550,0L0,0Z" class="g2_5" />
+<image preserveAspectRatio="none" x="84" y="83" width="377" height="113" xlink:href="img/1.png" />
+<image preserveAspectRatio="none" x="154" y="162" width="236" height="235" xlink:href="img/2.png" />
+<image preserveAspectRatio="none" x="206" y="339" width="135" height="133" xlink:href="img/3.png" />
+<image preserveAspectRatio="none" x="40" y="205" width="148" height="148" xlink:href="img/4.png" />
+<image preserveAspectRatio="none" x="356" y="202" width="151" height="151" xlink:href="img/5.png" />
+<image preserveAspectRatio="none" x="44" y="529" width="463" height="143" xlink:href="img/6.png" />
+<image preserveAspectRatio="none" x="44" y="655" width="463" height="143" xlink:href="img/7.png" />
+</svg>
