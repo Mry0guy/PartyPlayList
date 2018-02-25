@@ -1,10 +1,9 @@
 import React from 'react';
-import dog from '../images/dog.png';
+import Playlist from './Playlist';
 
 const Guests = () => (
 	<div>
-		<Playlist resident={false}/>
-		<AddSong />
+		<Playlist host={false}/>
 	</div>
 );
 

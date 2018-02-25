@@ -1,10 +1,14 @@
 import React from 'react';
+import Playlist from './Playlist';
 
-class hosts extends React.Component {
+class Hosts extends React.Component {
 	render() {
 		return (
-			
-		);}
+			<div>
+				<Playlist host={true} />
+			</div>
+		)
+	}
 
 }
-export default Guests;
+export default Hosts;
