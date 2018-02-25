@@ -19,9 +19,9 @@ public class main {
     public static void PrintAction(String action) { System.out.println(action); }
 
     public static void processHandler(String wsactionType) {
-        private static final String accessToken = "taHZ2SdB-bPA3FsK3D7ZN5npZS47cMy-IEySVEGttOhXmqaVAIo0ESvTCLjLBifhHOHOIuhFUKPW1WMDP7w6dj3MAZdWT8CLI2MkZaXbYLTeoDvXesf2eeiLYPBGdx8tIwQJKgV8XdnzH_DONk";
-        private static final String userId = "abbaspotify";
-        private static final String playlistId = "3AGOiaoRXMSjswCLtuNqv5";
+        private String accessToken = "";
+        private static final String userId = "a3sv6jskskbxm3n28n5u4elf2";
+        private static final String playlistId = "4f11Gq4W7Wy4pPxUfMfpnx";
         private static final SpotifyApi spotifyApi = new SpotifyApi.Builder().setAccessToken(accessToken).build();
         private static final String[] uris = new String[]{"01iyCAUm8EvOFqVWYJ3dVX"};
         //switch over input fo wsaction
@@ -63,7 +63,9 @@ public class main {
                     guest.downvote();
                 }
                 break;
-            //case "ADMIN_LOGIN": break;
+            case "ADMIN_LOGIN": 
+            accessToken = wsaction.Payload();
+            break;
         }
     }
 
