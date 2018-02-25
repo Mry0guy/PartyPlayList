@@ -1,17 +1,17 @@
 import React from 'react';
-import Navigation from './components/Navigation';
 import 'normalize.css';
 import 'styles/index.scss';
+import withRouter from 'react-router-dom'
 
-const App = () => (
-  <div className='App'>
-    <Navigation/>
-    <div>
-      <h1>It Works!</h1>
-      <p>This React project just works including <span className="redBg">module</span> local styles.</p>
-      <p>Enjoy!</p>
-    </div>
-  </div>
-);
+class App extends React.Component() {
+	render() {
+		return (
+			<div className='App'>
+				<div className='.homeButton' onClick={() => { this.props.history.push('/guest') }}>JOIN A PARTY</div>
+				<div className='.homeButton' onClick={() => { this.props.history.push('/host') }}>START A PARTY</div>
+			</div>
+		)
+	}
+}
 
-export default App;
+export default withRouter({ history })(App);
