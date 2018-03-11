@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux'
 import TextField from 'material-ui/TextField';
 import { put } from 'redux-saga/effects'
 import '../../styles/main.scss';
@@ -28,7 +28,7 @@ class Hosts extends React.Component {
 						}} />
 						<button type='button' name='loginButton' style={{ display: 'none' }} />
 						<span label='loginButton' className='homeButton' onClick={() => {
-							postLogin(textData[0], textData[1])
+							this.postLogin(textData[0], textData[1])
 						}} >START A PARTY</span>
 					</div>
 				</div>
@@ -44,16 +44,17 @@ class Hosts extends React.Component {
 			)
 		}
 	}
-}
 
-function postLogin(user, party) {
-	this.props.dispatch({
-		type: 'HOST_LOGIN',
+	postLogin(user, party) {
+		this.props.dispatch({
+			type: 'HOST_LOGIN',
 			user,
 			party
-		}
-	)
+		})
+	}
 }
+
+
 
 function MapStateToProps(state, ownProps) {
 	if (state.pageQue) {
