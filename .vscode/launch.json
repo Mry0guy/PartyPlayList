@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/lib/frontend/lib/index.js",
+            "cwd": "${workspaceRoot}/lib/frontend",
+            "preLaunchTask": "debug",
+            "outFiles": [
+                "${workspaceRoot}/lib/frontend/src/**.js"
+            ]
+        }
+    ],
+    "compounds": []
+}

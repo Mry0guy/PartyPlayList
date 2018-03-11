@@ -1,0 +1,241 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);html {
+  height: 100%;
+}
+
+body, div {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  font-family: 'Roboto';
+  font-weight: 900;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  body {
+    background-image: url(./b7388b0176f8044130bfc6752e4744e5.png);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-image: url(./bab806ac5ff01801234c36f15019b3b7.png);
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    background-image: url(./e6fda33761437554b8b85d4af2c0860a.png);
+  }
+}
+
+.LandingContainer {
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+  align-content: center;
+  vertical-align: center;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "not not not" "welcome welcome welcome" "not not not";
+}
+
+.LandingOutline {
+  grid-row: 2;
+  grid-column: 2;
+  height: 100%;
+  width: 100%;
+  border: 3px white solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.homeTitle {
+  display: flex;
+  font-style: italic;
+  color: white;
+  margin: 4px;
+  transition-duration: .4s;
+  width: 150px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  opacity: 0.75;
+}
+
+.homeButton {
+  display: flex;
+  border: 2px solid white;
+  color: white;
+  margin: 4px;
+  transition-duration: .4s;
+  width: 150px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.homeButton:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 3px 3px 1px 1px black;
+}
+
+.textInput {
+  color: white;
+}
+
+.songBox {
+  grid-auto-rows: 25% 25% 25% 25%;
+  grid-auto-columns: 80% 20%;
+  grid-template-areas: "song upvote" "album cover" "artist cover" ". downvote";
+  border: 2px solid white;
+  color: white;
+  margin: 4px;
+}
+
+.songTitle {
+  grid-area: 'song';
+  font-size: 26pt;
+}
+
+.songAlbum {
+  grid-area: 'album';
+  font-size: 18pt;
+}
+
+.songArtist {
+  grid-area: 'artist';
+}
+html {
+  height: 100%;
+}
+
+body, div {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  font-family: 'Roboto';
+  font-weight: 900;
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  body {
+    background-image: url(./b7388b0176f8044130bfc6752e4744e5.png);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-image: url(./bab806ac5ff01801234c36f15019b3b7.png);
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    background-image: url(./e6fda33761437554b8b85d4af2c0860a.png);
+  }
+}
+
+.LandingContainer {
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+  align-content: center;
+  vertical-align: center;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "not not not" "welcome welcome welcome" "not not not";
+}
+
+.LandingOutline {
+  grid-row: 2;
+  grid-column: 2;
+  height: 100%;
+  width: 100%;
+  border: 3px white solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+}
+
+.homeTitle {
+  display: flex;
+  font-style: italic;
+  color: white;
+  margin: 4px;
+  transition-duration: .4s;
+  width: 150px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  opacity: 0.75;
+}
+
+.homeButton {
+  display: flex;
+  border: 2px solid white;
+  color: white;
+  margin: 4px;
+  transition-duration: .4s;
+  width: 150px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.homeButton:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 3px 3px 1px 1px black;
+}
+
+.textInput {
+  color: white;
+}
+
+.songBox {
+  grid-auto-rows: 25% 25% 25% 25%;
+  grid-auto-columns: 80% 20%;
+  grid-template-areas: "song upvote" "album cover" "artist cover" ". downvote";
+  border: 2px solid white;
+  color: white;
+  margin: 4px;
+}
+
+.songTitle {
+  grid-area: 'song';
+  font-size: 26pt;
+}
+
+.songAlbum {
+  grid-area: 'album';
+  font-size: 18pt;
+}
+
+.songArtist {
+  grid-area: 'artist';
+}
+
+.redBg {
+  background-color: red;
+  border-radius: 51px;
+  color: white;
+  padding: 5px;
+}
