@@ -1,4 +1,3 @@
 .DS_Store
-lib/backend-depricated
-lib/Backend/node_modules
-lib/frontend/node_modules
+backend_depricated
+node_modules
