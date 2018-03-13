@@ -45,7 +45,7 @@ class Routes extends React.Component {
 		return (
 			<Router>
 				<MuiThemeProvider muiTheme={muiTheme}>
-					<div>
+					<div className="invisidiv">
 						<Route exact path="/" component={LandingPage} />
 						<Route path="/guests" component={Guests} />
 						<Route path="/hosts" component={Hosts} />

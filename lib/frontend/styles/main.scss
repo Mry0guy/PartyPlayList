@@ -1,20 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
-
-
-html{
+html,body{
   height: 100%;
 }
 
-body, div{
-  height:100%;
-  width:100%;
-  background-size:cover;
-  font-family: 'Roboto';
-  font-weight: 900;
-  color:white;
-  height:100%;
-  width:100%;
-}
+
 
 @media (min-width: 320px) and (max-width: 767px) {
 body {
@@ -32,6 +20,10 @@ body {
 
 }
 }
+.invisidiv, #container, #app{
+  widows: 100%;
+  height:100%;
+}
 
 .LandingContainer{
   width: 100%;
@@ -46,7 +38,9 @@ body {
   "not not not"
   "welcome welcome welcome"
   "not not not";
-
+  font-family: 'Roboto';
+  font-weight: 900;
+  color:white;
 }
 
 .LandingOutline{
@@ -74,6 +68,8 @@ body {
   justify-content: center;
   background-color:black;
   opacity: 0.75;
+  font-family: 'Roboto';
+  font-weight: 900;
 }
 
 .homeButton{
@@ -87,6 +83,8 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  font-family: 'Roboto';
+  font-weight: 900;
 }
 
 .homeButton:hover{

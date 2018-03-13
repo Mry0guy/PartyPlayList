@@ -7,13 +7,14 @@ import rootReducer from './reducers'
 import Routes from './routes'
 import middleware from 'redux-saga'
 import { setupSaga } from './saga'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { createSagaMonitor, DockableSagaView } from '../redux-saga-devtools/src/index.js'
 
-
-const initialState = { host: false, que: [], SEARCH_RESULTS: [] }
-const sagaMiddleware = middleware()
+const monitor = createSagaMonitor()
+const initialState = { host: false, que: [], SEARCH_RESULTS: [], pageQue: null }
+const sagaMiddleware = middleware({ sagaMonitor: monitor })
 const middlewareList = [sagaMiddleware]
-const enhancers = []
-const composedEnhancers = compose(applyMiddleware(...middlewareList), ...enhancers)
+const composedEnhancers = composeWithDevTools(applyMiddleware(...middlewareList))
 var store = createStore(rootReducer, initialState, composedEnhancers)
 
 sagaMiddleware.run(setupSaga)
@@ -22,9 +23,12 @@ sagaMiddleware.run(setupSaga)
 
 ReactDOM.render(
 	<AppContainer>
-		<Provider store={store}>
-			<Routes />
-		</Provider>
+		<div className="invisidiv">
+			<Provider store={store}>
+				<Routes />
+			</Provider>
+			<DockableSagaView monitor={monitor} />
+		</div>
 	</AppContainer>,
 	document.getElementById('app')
 );
@@ -35,11 +39,15 @@ if (module.hot) {
 		const NextApp = require('./components/landingPage').default;
 		ReactDOM.render(
 			<AppContainer>
-				<Provider store={store}>
-					<NextApp />
-				</Provider>
+				<div className="invisidiv">
+					<Provider store={store}>
+						<NextApp />
+					</Provider>
+					<DockableSagaView monitor={monitor} />
+				</div>
 			</AppContainer>,
 			document.getElementById('app')
 		);
 	});
 }
+//
