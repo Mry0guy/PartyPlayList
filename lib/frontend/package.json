@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --progress --profile --colors",
     "lint": "eslint --ext js --ext jsx src || exit 0",
     "dev": " webpack-dashboard -- webpack-dev-server",
-    "test": "export NODE_ENV=test && jest",
+    "test": "babel-node src/test.js",
     "debug": "babel src -d lib -s"
   },
   "repository": {
@@ -38,6 +38,7 @@
     "request": "^2.83.0",
     "resolve-url-loader": "^2.2.1",
     "sass-loader": "^6.0.6",
+    "socket.io-client": "^2.0.4",
     "tls": "^0.0.1"
   },
   "devDependencies": {
