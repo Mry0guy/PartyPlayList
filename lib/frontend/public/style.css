@@ -1,16 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);html {
+html, body {
   height: 100%;
-}
-
-body, div {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  font-family: 'Roboto';
-  font-weight: 900;
-  color: white;
-  height: 100%;
-  width: 100%;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -31,6 +20,11 @@ body, div {
   }
 }
 
+.invisidiv, #container, #app {
+  widows: 100%;
+  height: 100%;
+}
+
 .LandingContainer {
   width: 100%;
   height: 100%;
@@ -41,6 +35,9 @@ body, div {
   grid-template-rows: 1fr 3fr 1fr;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-areas: "not not not" "welcome welcome welcome" "not not not";
+  font-family: 'Roboto';
+  font-weight: 900;
+  color: white;
 }
 
 .LandingOutline {
@@ -68,6 +65,8 @@ body, div {
   justify-content: center;
   background-color: black;
   opacity: 0.75;
+  font-family: 'Roboto';
+  font-weight: 900;
 }
 
 .homeButton {
@@ -81,6 +80,8 @@ body, div {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  font-family: 'Roboto';
+  font-weight: 900;
 }
 
 .homeButton:hover {
@@ -115,19 +116,8 @@ body, div {
 .songArtist {
   grid-area: 'artist';
 }
-html {
+html, body {
   height: 100%;
-}
-
-body, div {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  font-family: 'Roboto';
-  font-weight: 900;
-  color: white;
-  height: 100%;
-  width: 100%;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -148,6 +138,11 @@ body, div {
   }
 }
 
+.invisidiv, #container, #app {
+  widows: 100%;
+  height: 100%;
+}
+
 .LandingContainer {
   width: 100%;
   height: 100%;
@@ -158,6 +153,9 @@ body, div {
   grid-template-rows: 1fr 3fr 1fr;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-areas: "not not not" "welcome welcome welcome" "not not not";
+  font-family: 'Roboto';
+  font-weight: 900;
+  color: white;
 }
 
 .LandingOutline {
@@ -185,6 +183,8 @@ body, div {
   justify-content: center;
   background-color: black;
   opacity: 0.75;
+  font-family: 'Roboto';
+  font-weight: 900;
 }
 
 .homeButton {
@@ -198,6 +198,8 @@ body, div {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  font-family: 'Roboto';
+  font-weight: 900;
 }
 
 .homeButton:hover {

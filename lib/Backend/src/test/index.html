@@ -1,0 +1,14 @@
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+<script>
+    const client = io('themusichere.com:80')
+    client.on('connect', () => {
+        console.log('connect')
+    })
+    client.on('message', (data) => {
+        console.log(data)
+        document.write(data)
+    })
+</script>
+
+</html>
