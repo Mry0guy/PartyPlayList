@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import TextField from 'material-ui/TextField';
 import { put } from 'redux-saga/effects'
 import '../../styles/main.scss';
+import actions from '../actions'
 
 var textData = ['', '']
 
@@ -42,7 +43,7 @@ class Hosts extends React.Component {
 
 function MapDispatchToProps(dispatch) {
 	const login = (user, party) => {
-		dispatch({ type: 'HOST_LOGIN', payload: { user, party } })
+		dispatch(actions.SERVICE_LOGIN(user, party))
 	}
 	return ({
 		postLogin: login
