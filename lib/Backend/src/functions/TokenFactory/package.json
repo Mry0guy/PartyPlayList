@@ -1,0 +1,14 @@
+{
+  "name": "tokenfactorylambda",
+  "version": "1.0.0",
+  "description": "makes tokens",
+  "main": "TokenFactory.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^8.2.0"
+  }
+}
