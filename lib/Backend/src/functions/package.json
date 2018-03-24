@@ -1,0 +1,14 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "zip": "node index.js"
+  },
+  "author": "rguild",
+  "license": "MIT",
+  "dependencies": {
+    "easy-zip": "0.0.4"
+  }
+}
