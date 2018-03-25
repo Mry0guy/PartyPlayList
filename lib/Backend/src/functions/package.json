@@ -9,6 +9,7 @@
   "author": "rguild",
   "license": "MIT",
   "dependencies": {
-    "easy-zip": "0.0.4"
+    "archiver": "^2.1.1",
+    "lambda-packager": "^0.2.1"
   }
 }
