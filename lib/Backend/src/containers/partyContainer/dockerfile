@@ -1,0 +1,9 @@
+FROM node:9
+
+EXPOSE 80
+
+ADD ./ /home
+
+WORKDIR /home
+
+ENTRYPOINT node index.js
